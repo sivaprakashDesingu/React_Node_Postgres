@@ -22,9 +22,9 @@ async function testConnection() {
 const isConnected = testConnection();
 console.log(isConnected)
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/Client/build/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname+'/Client/build/index.html'));
+// });
 
 app.post('/login', user.login);
 app.post('/logout', user.logOut);
