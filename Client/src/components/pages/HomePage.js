@@ -39,6 +39,9 @@ class HomePage extends React.Component {
     return data.map(el => {
       return (
         <div className="table-row">
+          <div style={{maxWidth:'50px'}} className="table-data">
+            <input style={{cursor:'pointer'}} type="checkbox" />
+          </div>
           <div className="table-data">{el.build_id}</div>
           <div className="table-data">{el.app_id}</div>
           <div className="table-data">{el.tag_name}</div>
@@ -61,6 +64,7 @@ class HomePage extends React.Component {
         {this.state.data.length >= 1 ?
           <div className="table">
             <div className="table-header">
+              <div style={{maxWidth:'50px'}} className="header__item">  </div>
               <div className="header__item">Build ID</div>
               <div className="header__item">App ID</div>
               <div className="header__item">Tag Name</div>
